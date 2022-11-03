@@ -1,5 +1,11 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream, info, health
 
 spring:
   datasource:
