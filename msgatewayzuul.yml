@@ -13,14 +13,17 @@ zuul:
   routes:
     mscliente:
       path: /client/**
+      url: forward:/cliente
       sensitive-headers:
       service-id: mscliente
     msorders:
       path: /order/**
+      url: forward:/order
       sensitive-headers:
       service-id: msorders
     msreports:
       path: /report/**
+      url: forward:/report
       sensitive-headers:
       service-id: msreports
 
