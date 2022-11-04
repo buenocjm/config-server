@@ -4,6 +4,10 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
     service-url:
       default-zone: http://localhost:8761/eureka
   instance:
@@ -11,8 +15,14 @@ eureka:
  
 zuul:
   host:
-    connect-timeout-millis: 200000
+    connect-timeout-millis: 60000
+    max-per-route-connections: 10000
+    max-total-connections: 5000
     socket-timeout-millis: 60000
+    max-semaphores: 500
+  ribbon:
+    eager-load:
+      enabled= true
   ignoredServices: '*'
   routes:
     mscliente:
@@ -27,6 +37,3 @@ zuul:
       path: /report/**
       sensitive-headers:
       service-id: msreports
-
-
- 
