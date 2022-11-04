@@ -21,8 +21,10 @@ zuul:
     socket-timeout-millis: 60000
     max-semaphores: 500
   ribbon:
+    ConnectTimeout: 10000
+    ReadTimeout: 60000
     eager-load:
-      enabled= true
+      enabled: true
   ignoredServices: '*'
   routes:
     mscliente:
@@ -46,6 +48,5 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 11000
-ribbon:
-  ConnectTimeout: 10000
-  ReadTimeout: 60000
+
+  
