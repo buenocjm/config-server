@@ -11,7 +11,7 @@ eureka:
  
 zuul:
   host:
-    connect-timeout-millis: 20000
+    connect-timeout-millis: 200000
     socket-timeout-millis: 60000
   ignoredServices: '*'
   routes:
