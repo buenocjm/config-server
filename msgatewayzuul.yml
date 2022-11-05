@@ -25,10 +25,7 @@ zuul:
   ignoredServices: '*'
   host:
     connect-timeout-millis: 60000
-    max-per-route-connections: 10000
-    max-total-connections: 5000
     socket-timeout-millis: 60000
-    max-semaphores: 500
     routes:
       mscliente:
         path: /client/**
