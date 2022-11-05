@@ -25,7 +25,7 @@ zuul:
     ReadTimeout: 60000
     eager-load:
       enabled: true
-  ignored-services: '*'
+  ignoredServices: '*'
   prefix : /apptaller
   routes:
     mscliente:
