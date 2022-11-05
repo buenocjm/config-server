@@ -13,30 +13,20 @@ eureka:
   instance:
     hostname: localhost
 
-    
-
-  
- 
 zuul:
-  ignored-services: '*'
-  host:
-    connect-timeout-millis: 60000
-    socket-timeout-millis: 60000
-    routes:
-      mscliente:
-        path: /client/**
-        sensitive-headers:
-        service-id: mscliente
-      msorders:
-        path: /order/**
-        sensitive-headers:
-        service-id: msorders
-      msreports:
-        path: /report/**
-        sensitive-headers:
-        service-id: msreports
-
-
+  routes:
+    mscliente:
+      path: /client/**
+      sensitive-headers:
+      service-id: mscliente
+    msorders:
+      path: /order/**
+      sensitive-headers:
+      service-id: msorders
+    msreports:
+      path: /report/**
+      sensitive-headers:
+      service-id: msreports
 
 ribbon:
   ConnectTimeout: 10000
@@ -44,13 +34,10 @@ ribbon:
   eager-load:
     enabled: true
 
-
-hystrix: 
+hystrix:
   command:
     default:
       execution:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
-
-  
