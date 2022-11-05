@@ -14,12 +14,7 @@ eureka:
     hostname: localhost
  
 zuul:
-  host:
-    connect-timeout-millis: 60000
-    max-per-route-connections: 10000
-    max-total-connections: 5000
-    socket-timeout-millis: 60000
-    max-semaphores: 500
+
   ribbon:
     ConnectTimeout: 10000
     ReadTimeout: 60000
@@ -27,19 +22,26 @@ zuul:
       enabled: true
   ignoredServices: '*'
   prefix : /apptaller
-  routes:
-    mscliente:
-      path: /client/**
-      sensitive-headers:
-      service-id: mscliente
-    msorders:
-      path: /order/**
-      sensitive-headers:
-      service-id: msorders
-    msreports:
-      path: /report/**
-      sensitive-headers:
-      service-id: msreports
+
+  host:
+    connect-timeout-millis: 60000
+    max-per-route-connections: 10000
+    max-total-connections: 5000
+    socket-timeout-millis: 60000
+    max-semaphores: 500
+    routes:
+      mscliente:
+        path: /client/**
+        sensitive-headers:
+        service-id: mscliente
+      msorders:
+        path: /order/**
+        sensitive-headers:
+        service-id: msorders
+      msreports:
+        path: /report/**
+        sensitive-headers:
+        service-id: msreports
 
 
 hystrix: 
