@@ -21,7 +21,7 @@ zuul:
     eager-load:
       enabled: true
   ignoredServices: '*'
-  prefix : /apptaller
+
 
   host:
     connect-timeout-millis: 60000
