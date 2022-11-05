@@ -14,11 +14,7 @@ eureka:
     hostname: localhost
 
     
-ribbon:
-    ConnectTimeout: 10000
-    ReadTimeout: 60000
-    eager-load:
-      enabled: true
+
   
  
 zuul:
@@ -39,6 +35,14 @@ zuul:
         path: /report/**
         sensitive-headers:
         service-id: msreports
+
+
+
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 60000
+  eager-load:
+    enabled: true
 
 
 hystrix: 
