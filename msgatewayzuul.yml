@@ -17,19 +17,18 @@ zuul:
   host:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000 #important
-  ignoredServices: \*
-  prefix : /app
+  ignoredServices: "*"
   routes:
     mscliente:
-      path: /cliente/**
+      path: /cli/**
       sensitive-headers:
       service-id: mscliente
     msorders:
-      path: /ordeneservicio/**
+      path: /order/**
       sensitive-headers:
       service-id: msorders
     msreports:
-      path: /informeordenservicio/**
+      path: /inform/**
       sensitive-headers:
       service-id: msreports
 
