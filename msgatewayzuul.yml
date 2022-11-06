@@ -20,15 +20,15 @@ zuul:
   ignored-services: '*'
   routes:
     mscliente:
-      path: /client/**
+      path: /cliente/**
       sensitive-headers:
       service-id: mscliente
     msorders:
-      path: /order/**
+      path: /ordeneservicio/**
       sensitive-headers:
       service-id: msorders
     msreports:
-      path: /report/**
+      path: /informeordenservicio/**
       sensitive-headers:
       service-id: msreports
 
