@@ -23,14 +23,17 @@ zuul:
     mscliente:
       path: /cli/**
       sensitive-headers:
+      stripPrefix: false
       service-id: mscliente
     msorders:
       path: /order/**
       sensitive-headers:
+      stripPrefix: false
       service-id: msorders
     msreports:
       path: /inform/**
       sensitive-headers:
+      stripPrefix: false
       service-id: msreports
 
 ribbon:
