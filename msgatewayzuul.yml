@@ -13,23 +13,21 @@ eureka:
   instance:
     hostname: localhost
 ribbon:
-    ConnectTimeout: 10000
-    ReadTimeout: 60000
-    eager-load:
-      enabled: true
+  ConnectTimeout: 10000
+  ReadTimeout: 60000
+  eager-load:
+    enabled: true
   
  
 zuul:
-
-  ignored-services: '*'
-  prefix : /apptaller
-
   host:
     connect-timeout-millis: 60000
     max-per-route-connections: 10000
     max-total-connections: 5000
     socket-timeout-millis: 60000
     max-semaphores: 500
+    prefix : /apptaller
+    ignored-services: '*'
     routes:
       mscliente:
         path: /client/**
