@@ -15,11 +15,8 @@ eureka:
 
 zuul:
   host:
-    connect-timeout-millis: 60000
-    max-per-route-connections: 10000
-    max-total-connections: 5000
     socket-timeout-millis: 60000
-    max-semaphores: 500
+    connect-timeout-millis: 60000 #important
   ignored-services: '*'
   routes:
     mscliente:
@@ -35,6 +32,17 @@ zuul:
       sensitive-headers:
       service-id: msreports
 
+ribbon:
+  eureka:
+    enabled: true  #important
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 
-
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000 #important
   
