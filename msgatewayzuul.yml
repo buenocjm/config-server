@@ -15,23 +15,24 @@ eureka:
 
 
 zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000 #important
+  ignoredServices: "*"
   routes:
     mscliente:
-      path: /cliente/**
-      serviceId: mscliente
-      stripPrefix: false
-      sensitiveHeaders:
+      path: /cli/**
+      sensitive-headers:
+      service-id: mscliente
     msorders:
-      path: /ordeneservicio/**
-      serviceId: msorders
-      stripPrefix: false
-      sensitiveHeaders:
+      path: /order/**
+      sensitive-headers:
+      service-id: msorders
     msreports:
-      path: /informeordenservicio/**
-      serviceId: msreports
-      stripPrefix: false
-      sensitiveHeaders:
-      
+      path: /inform/**
+      sensitive-headers:
+      service-id: msreports
+
 ribbon:
   eureka:
     enabled: true  #important
