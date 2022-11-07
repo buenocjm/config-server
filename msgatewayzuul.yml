@@ -17,21 +17,21 @@ eureka:
 zuul:
   routes:
     mscliente:
-      path: /cli/**
+      path: /cliente/**
       serviceId: mscliente
       stripPrefix: false
       sensitiveHeaders:
     msorders:
-      path: /order/**
+      path: /ordeneservicio/**
       serviceId: msorders
       stripPrefix: false
       sensitiveHeaders:
     msreports:
-      path: /inform/**
+      path: /informeordenservicio/**
       serviceId: msreports
       stripPrefix: false
       sensitiveHeaders:
-
+      
 ribbon:
   eureka:
     enabled: true  #important
