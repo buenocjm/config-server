@@ -18,19 +18,19 @@ zuul:
   routes:
     mscliente:
       path: /cli/**
-      service-id: mscliente
-      strip-prefix: false
-      sensitive-headers:
+      serviceId: mscliente
+      stripPrefix: false
+      sensitiveHeaders:
     msorders:
       path: /order/**
-      service-id: msorders
-      strip-prefix: false
-      sensitive-headers:
+      serviceId: msorders
+      stripPrefix: false
+      sensitiveHeaders:
     msreports:
       path: /inform/**
-      service-id: msreports
-      strip-prefix: false
-      sensitive-headers:
+      serviceId: msreports
+      stripPrefix: false
+      sensitiveHeaders:
 
 ribbon:
   eureka:
