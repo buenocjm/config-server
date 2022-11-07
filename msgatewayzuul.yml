@@ -22,19 +22,19 @@ zuul:
   routes:
     mscliente:
       path: /cli/**
-      sensitive-headers:
-      stripPrefix: false
       service-id: mscliente
+      strip-prefix: false
+      sensitive-headers:
     msorders:
       path: /order/**
-      sensitive-headers:
-      stripPrefix: false
       service-id: msorders
+      strip-prefix: false
+      sensitive-headers:
     msreports:
       path: /inform/**
-      sensitive-headers:
-      stripPrefix: false
       service-id: msreports
+      strip-prefix: false
+      sensitive-headers:
 
 ribbon:
   eureka:
