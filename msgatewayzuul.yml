@@ -39,6 +39,16 @@ ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 60000
 
+Feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
 hystrix:
   command:
     default:
