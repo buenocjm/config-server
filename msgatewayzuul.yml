@@ -32,6 +32,10 @@ zuul:
       path: /inform/**
       sensitive-headers:
       service-id: msreports
+    mscomposer:
+      path: /comp/**
+      sensitive-headers:
+      service-id: mscomposer
 
 ribbon:
   eureka:
