@@ -23,23 +23,24 @@ zuul:
     mscliente:
       path: /cli/**
       stripPrefix: false
-      sensitive-headers:
-      service-id: mscliente
+      sensitiveHeaders:
+      serviceId: mscliente
     msorders:
       path: /order/**
       stripPrefix: false
-      sensitive-headers:
-      service-id: msorders
+      sensitiveHeaders:
+      serviceId: msorders
     msreports:
       path: /inform/**
       stripPrefix: false
-      sensitive-headers:
-      service-id: msreports
+      sensitiveHeaders:
+      serviceId: msreports
     mscomposer:
-      path: /comp/**
       stripPrefix: false
-      sensitive-headers:
-      service-id: mscomposer
+      path: /comp/**      
+      sensitiveHeaders:
+      serviceId: mscomposer
+    
 
 ribbon:
   eureka:
