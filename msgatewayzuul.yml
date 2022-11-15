@@ -22,18 +22,22 @@ zuul:
   routes:
     mscliente:
       path: /cli/**
+      stripPrefix: false
       sensitive-headers:
       service-id: mscliente
     msorders:
       path: /order/**
+      stripPrefix: false
       sensitive-headers:
       service-id: msorders
     msreports:
       path: /inform/**
+      stripPrefix: false
       sensitive-headers:
       service-id: msreports
     mscomposer:
       path: /comp/**
+      stripPrefix: false
       sensitive-headers:
       service-id: mscomposer
 
