@@ -20,18 +20,18 @@ zuul:
       sensitiveHeaders:
       serviceId: mscliente
     msorders:
-      path: /order/**
+      path: /ordeneservicio/**
       stripPrefix: false
       sensitiveHeaders:
       serviceId: msorders
     msreports:
-      path: /inform/**
+      path: /informeordenservicio/**
       stripPrefix: false
       sensitiveHeaders:
       serviceId: msreports
     mscomposer:
       stripPrefix: false
-      path: /comp/**      
+      path: /allreports/**      
       sensitiveHeaders:
       serviceId: mscomposer
     
